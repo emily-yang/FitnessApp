@@ -8,6 +8,6 @@ public class inspirationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_results);
+        setContentView(R.layout.activity_inspiration);
     }
 }
