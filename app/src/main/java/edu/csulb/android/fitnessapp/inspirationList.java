@@ -49,7 +49,6 @@ public class inspirationList extends AppCompatActivity {
     private SimpleAdapter simpleAdpt;
 
     private void initList() {
-        // populate the planets
         workoutList.add(createWorkout("workout", "Arms"));
         workoutList.add(createWorkout("workout", "Legs"));
         workoutList.add(createWorkout("workout", "Cardio"));
@@ -65,7 +64,7 @@ public class inspirationList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_inspiration_list);
 
         initList();
 
@@ -78,9 +77,6 @@ public class inspirationList extends AppCompatActivity {
 
             public void onItemClick(AdapterView<?> parentAdapter, View view,
                                     int position, long id) {
-                TextView clickedView = (TextView) view;
-
-                Toast.makeText(inspirationList.this, "Item with id ["+id+"] - Position ["+position+"] - Planet ["+clickedView.getText()+"]", Toast.LENGTH_SHORT).show();
 
             }
         });
