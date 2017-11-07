@@ -1,19 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.csulb.android.fitnessapp.MainActivity">
+    tools:context="edu.csulb.android.fitnessapp.MainActivity"
+    android:background="@color/mint">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:text="Upcoming Workouts"
+        android:textColor="@color/olive"
+        android:layout_margin="20dp"
+        android:id="@+id/textView" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/myWorkouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Workouts"
+        android:background="@color/red"
+        android:width="@dimen/button_width"
+        android:height="@dimen/button_height"
+        android:layout_marginBottom="19dp"
+        android:layout_above="@+id/myEvents"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        android:id="@+id/myEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="@dimen/button_width"
+        android:height="@dimen/button_height"
+        android:background="@color/red"
+        android:text="My Events"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/myWorkouts" />
+
+    <Button
+        android:id="@+id/inspiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inspiration"
+        android:background="@color/red"
+        android:width="@dimen/button_width"
+        android:height="@dimen/button_height"
+        android:layout_alignBaseline="@+id/myWorkouts"
+        android:layout_alignBottom="@+id/myWorkouts"
+        android:layout_alignStart="@+id/myLogs" />
+
+    <Button
+        android:id="@+id/myLogs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Logs"
+        android:background="@color/red"
+        android:width="@dimen/button_width"
+        android:height="@dimen/button_height"
+        android:layout_marginEnd="21dp"
+        android:layout_alignBaseline="@+id/myEvents"
+        android:layout_alignBottom="@+id/myEvents"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

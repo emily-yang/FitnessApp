@@ -16,15 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".StepsActivity">
+        <activity android:name=".myLogsActivity">
         </activity>
         <activity android:name=".WorkoutCreateActivity">
         </activity>
-        <activity android:name=".WorkoutTrackActivity">
+        <activity android:name=".myWorkoutsActivity">
         </activity>
-        <activity android:name=".EventResultsActivity">
+        <activity android:name=".inspirationActivity">
         </activity>
-        <activity android:name=".EventTrackActivity">
+        <activity android:name=".myEventsActivity">
         </activity>
     </application>
 

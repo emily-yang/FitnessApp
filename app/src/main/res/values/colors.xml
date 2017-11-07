@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- Defaults -->
+    <color name="colorPrimary">#1c2321</color>
+
+    <!-- Scheme -->
+    <color name="red">#e54b4b</color>
+    <color name="burgundy">#554348</color>
+    <color name="mint">#d7f9f1</color>
+    <color name="olive">#1c2321</color>
 </resources>
