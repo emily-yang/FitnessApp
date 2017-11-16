@@ -11,7 +11,7 @@
     android:orientation="horizontal">
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:columnCount="1"
@@ -37,9 +37,10 @@
     </GridLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="195dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
         android:columnCount="2"
         android:rowCount="2"
         android:id="@+id/gridLayout">
@@ -48,45 +49,53 @@
             android:id="@+id/myWorkouts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="177dp"
-            android:height="112dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:layout_marginBottom="10dp"
             android:text="My Workouts"
-            android:background="@color/mint" />
+            android:drawableTop="@drawable/my_workout_icon"
+            android:background="@color/mint"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"/>
 
         <Button
             android:id="@+id/myEvents"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="177dp"
-            android:height="112dp"
-            android:layout_marginTop="10dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             android:text="My Events"
-            android:background="@color/mint" />
+            android:drawableTop="@drawable/my_events_icon"
+            android:background="@color/mint"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"/>
 
         <Button
             android:id="@+id/inspiration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="177dp"
-            android:height="112dp"
-            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text="Inspiration"
-            android:background="@color/mint" />
+            android:drawableTop="@drawable/inspiration_icon"
+            android:background="@color/mint"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"/>
 
         <Button
             android:id="@+id/myLogs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:width="177dp"
-            android:height="112dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_marginLeft="10dp"
             android:text="My Logs"
-            android:background="@color/mint"/>
+            android:drawableTop="@drawable/my_logs_icon"
+            android:background="@color/mint"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"/>
 
     </GridLayout>
 
