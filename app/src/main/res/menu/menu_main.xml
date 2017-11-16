@@ -6,10 +6,25 @@
     <item android:id="@+id/action_home" android:title="Home"
         android:orderInCategory="101" />
 
-    <item android:id="@+id/action_account" android:title="Account"
+    <item android:id="@+id/action_profile" android:title="Profile"
         android:orderInCategory="102"/>
 
-    <item android:id="@+id/action_about" android:title="About"
+    <item android:id="@+id/action_workouts" android:title="Workouts"
         android:orderInCategory="103"/>
+
+    <item android:id="@+id/action_inspiration" android:title="Inspiration"
+        android:orderInCategory="104"/>
+
+    <item android:id="@+id/action_events" android:title="Events"
+        android:orderInCategory="105"/>
+
+    <item android:id="@+id/action_logs" android:title="Logs"
+        android:orderInCategory="106"/>
+
+    <item android:id="@+id/action_settings" android:title="Settings"
+        android:orderInCategory="107"/>
+
+    <item android:id="@+id/action_about" android:title="About"
+        android:orderInCategory="108"/>
 
 </menu>
