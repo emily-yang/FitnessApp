@@ -19,7 +19,7 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.Recycl
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new RecyclerViewHolder(LayoutInflater.from(parent.getContext())
-        .inflate(R.layout.list_item, parent, false));
+        .inflate(R.layout.event_list_item, parent, false));
     }
 
     @Override
