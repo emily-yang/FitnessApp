@@ -16,12 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".myLogsActivity"></activity>
-        <activity android:name=".WorkoutCreateActivity"></activity>
-        <activity android:name=".myWorkoutsActivity"></activity>
-        <activity android:name=".inspirationActivity"></activity>
-        <activity android:name=".myEventsActivity"></activity>
-        <activity android:name=".inspirationList"></activity>
+        <activity android:name=".myLogsActivity" />
+        <activity android:name=".WorkoutCreateActivity" />
+        <activity android:name=".myWorkoutsActivity" />
+        <activity android:name=".inspirationActivity" />
+        <activity android:name=".myEventsActivity" />
+        <activity android:name=".inspirationList" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>
