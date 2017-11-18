@@ -1,10 +1,14 @@
 package edu.csulb.android.fitnessapp;
 
+import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class inspirationActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,9 +36,20 @@ public class inspirationActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    ListView lv;
+    Context context;
+
+    ArrayList prgmName;
+    public static int [] prgmImages={R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger/*,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger*/};
+    public static String [] prgmNameList={"Squats","Bench Press","Bent Over Row","Barbell Shrugs"/*,"Tricep Extensions","Straight Bar","Cable Crunches", "Deadlift", "Standing Press", "Close Grip Bench Press", "Incline Curls"*/};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inspiration);
+        context=this;
+
+        lv=(ListView) findViewById(R.id.list);
+        lv.setAdapter(new CustomAdapter(this, prgmNameList,prgmImages));
+
     }
 }
