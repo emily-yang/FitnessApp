@@ -23,8 +23,8 @@
         <activity android:name=".inspirationActivity"/>
         <activity android:name=".AddEventActivity"/>
         <activity android:name=".inspirationList"/>
-        <activity android:name=".myEventsActivity">
-         <activity android:name=".BaseActivity">
+        <activity android:name=".myEventsActivity"/>
+        <activity android:name=".BaseActivity">
         </activity>
     </application>
 
