@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -64,6 +65,9 @@ public class AddEventActivity extends AppCompatActivity implements DatePickerDia
         eventResult = findViewById(R.id.event_result_field);
         eventDetails = findViewById(R.id.event_details_field);
         saveButton = findViewById(R.id.event_button);
+
+        // disallow keyboard input of date, must use DatePicker instead
+        eventDate.setFocusable(false);
 
         calendar = Calendar.getInstance();
         addEventViewModel = ViewModelProviders.of(this).get(AddEventViewModel.class);
