@@ -17,7 +17,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
-public class AddEventActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
+public class AddEventActivity extends BaseActivity implements DatePickerDialog.OnDateSetListener{
     private Date date;
     private DatePickerDialog datePicker;
     private Calendar calendar;
@@ -29,31 +29,6 @@ public class AddEventActivity extends AppCompatActivity implements DatePickerDia
     Button saveButton;
 
     private AddEventViewModel addEventViewModel;
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_home) {
-            final Intent viewHome = new Intent(this, MainActivity.class);
-            startActivity(viewHome);
-            return true;
-        }
-        if (id == R.id.action_account) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
-        if (id == R.id.action_about) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
