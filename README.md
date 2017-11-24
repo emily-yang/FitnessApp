@@ -15,7 +15,7 @@ Week by Week Basis
         Joanna: High Fidelity UI Designs
 
 3: Insert UI elements based on design
-        Emily: created a menu list
+        Emily: created events
         Taylor: created the home page
         Benjamin: worked on inspiration activity
         Joanna: UI Designs 
