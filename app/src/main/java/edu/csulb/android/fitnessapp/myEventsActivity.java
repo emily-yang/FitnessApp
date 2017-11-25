@@ -25,7 +25,10 @@ public class myEventsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_events);
+
+        //To be able to display the navigation drawer
+        getLayoutInflater().inflate(R.layout.activity_my_events, frameLayout);
+        mDrawerList.setItemChecked(position, true);
 
         Button button = (Button) findViewById(R.id.add_event_button);
         button.setOnClickListener(new View.OnClickListener() {

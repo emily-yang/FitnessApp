@@ -14,7 +14,10 @@ public class inspirationActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inspiration);
+
+        //To be able to display the navigation drawer
+        getLayoutInflater().inflate(R.layout.activity_inspiration, frameLayout);
+        mDrawerList.setItemChecked(position, true);
 
         final Intent getList = new Intent(this, inspirationList.class);
         list = (Button)findViewById(R.id.list);
