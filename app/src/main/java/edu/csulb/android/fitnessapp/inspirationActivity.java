@@ -41,7 +41,7 @@ public class inspirationActivity extends AppCompatActivity {
 
     ArrayList prgmName;
     public static int [] prgmImages={R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger/*,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger,R.drawable.tiger*/};
-    public static String [] prgmNameList={"Squats","Bench Press","Bent Over Row","Barbell Shrugs"/*,"Tricep Extensions","Straight Bar","Cable Crunches", "Deadlift", "Standing Press", "Close Grip Bench Press", "Incline Curls"*/};
+    public static String [] prgmNameList={"Back","Legs","Arms","Chest"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

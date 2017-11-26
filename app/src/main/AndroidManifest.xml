@@ -21,7 +21,13 @@
         <activity android:name=".myWorkoutsActivity"></activity>
         <activity android:name=".inspirationActivity"></activity>
         <activity android:name=".myEventsActivity"></activity>
-        <activity android:name=".inspirationList"></activity>
+        <activity android:name=".ActivityBack"></activity>
+        <activity android:name=".ActivityLegs"></activity>
+        <activity android:name=".ActivityArms"></activity>
+        <activity android:name=".ActivityChest"></activity>
+
+
+
     </application>
 
 </manifest>

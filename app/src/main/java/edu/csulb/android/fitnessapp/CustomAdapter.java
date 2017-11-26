@@ -2,7 +2,6 @@ package edu.csulb.android.fitnessapp;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,27 +65,23 @@ public class CustomAdapter extends BaseAdapter {
                 // TODO Auto-generated method stub
                 switch (position) {
                     case 0:
-                        String myUri = "https://www.youtube.com/watch?v=R2dMsNhN3DE";
-                        Intent list1 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri));
-                        context.startActivity(list1);
+                        Intent back = new Intent(v.getContext(), ActivityBack.class);
+                        context.startActivity(back);
                         break;
 
                     case 1:
-                        String myUri2 = "https://www.youtube.com/watch?v=tuwHzzPdaGc";
-                        Intent list2 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri2));
-                        context.startActivity(list2);
+                        Intent legs = new Intent(v.getContext(), ActivityLegs.class);
+                        context.startActivity(legs);
                         break;
 
                     case 2:
-                        String myUri3 = "https://www.youtube.com/watch?v=paCfxhgW6bI";
-                        Intent list3 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri3));
-                        context.startActivity(list3);
+                        Intent arms = new Intent(v.getContext(), ActivityArms.class);
+                        context.startActivity(arms);
                         break;
 
                     case 3:
-                        String myUri4 = "https://www.youtube.com/watch?v=6hNudn7Peco";
-                        Intent list4 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri4));
-                        context.startActivity(list4);
+                        Intent chest = new Intent(v.getContext(), ActivityChest.class);
+                        context.startActivity(chest);
                         break;
 
                     /*case 4:
