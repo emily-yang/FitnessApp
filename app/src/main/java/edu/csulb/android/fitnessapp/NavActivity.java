@@ -205,7 +205,11 @@ class MyAdapter extends BaseAdapter{
             "Home",
             "Profile",
             "Workouts",
-
+            "Inspiration",
+            "Events",
+            "Logs",
+            "About",
+            "Settings"
     };
 
     /**
@@ -214,7 +218,12 @@ class MyAdapter extends BaseAdapter{
     protected int[] featureIconList = {
             R.drawable.ic_launcher_background,
             R.drawable.ic_launcher_background,
+            R.drawable.my_workout_icon,
+            R.drawable.inspiration_icon,
+            R.drawable.my_events_icon,
+            R.drawable.my_logs_icon,
             R.drawable.ic_launcher_background,
+            R.drawable.ic_launcher_background
     };
 
     //Get the context
