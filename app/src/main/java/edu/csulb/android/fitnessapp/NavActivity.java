@@ -172,18 +172,44 @@ public class NavActivity extends AppCompatActivity{
 
         mDrawerLayout.closeDrawer(mDrawerList);
         switch (position) {
-            case 1: //Calculate Sleep Time
-                Toast.makeText(this, "01", Toast.LENGTH_LONG).show();
+            case 1:
+                Intent intent1 = new Intent(this, MainActivity.class);
+                startActivity(intent1);
                 break;
 
-            case 2: //Sleep now
-                Toast.makeText(this, "02", Toast.LENGTH_LONG).show();
-
+            case 2:
+                Intent intent2 = new Intent(this, MainActivity.class);
+                startActivity(intent2);
                 break;
 
-            case 3: //Power Nap
+            case 3:
+                Intent intent3 = new Intent(this, myWorkoutsActivity.class);
+                startActivity(intent3);
+                break;
 
-                Toast.makeText(this, "03", Toast.LENGTH_LONG).show();
+            case 4:
+                Intent intent4 = new Intent(this, inspirationActivity.class);
+                startActivity(intent4);
+                break;
+
+            case 5:
+                Intent intent5 = new Intent(this, myEventsActivity.class);
+                startActivity(intent5);
+                break;
+
+            case 6:
+                Intent intent6 = new Intent(this, myLogsActivity.class);
+                startActivity(intent6);
+                break;
+
+            case 7:
+                Intent intent7 = new Intent(this, myWorkoutsActivity.class);
+                startActivity(intent7);
+                break;
+
+            case 8:
+                Intent intent8 = new Intent(this, myWorkoutsActivity.class);
+                startActivity(intent8);
                 break;
 
             default:
@@ -216,14 +242,14 @@ class MyAdapter extends BaseAdapter{
      * array of icons
      */
     protected int[] featureIconList = {
-            R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background,
+            R.drawable.ic_home_icon,
+            R.drawable.ic_profile_icon,
             R.drawable.my_workout_icon,
             R.drawable.inspiration_icon,
             R.drawable.my_events_icon,
             R.drawable.my_logs_icon,
-            R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_background
+            R.drawable.ic_about_icon,
+            R.drawable.ic_setting_icons
     };
 
     //Get the context
@@ -267,7 +293,6 @@ class MyAdapter extends BaseAdapter{
         ImageView titleImageView = (ImageView) row.findViewById(R.id.navImageView);
         titleTextView.setText(featureList[position]);
         titleImageView.setImageResource(featureIconList[position]);
-
 
         return row;
     }
