@@ -24,6 +24,8 @@
         <activity android:name=".inspirationList" />
         <activity android:name=".myEventsActivity" />
         <activity android:name=".BaseActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>

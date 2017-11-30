@@ -203,12 +203,12 @@ public class NavActivity extends AppCompatActivity{
                 break;
 
             case 7:
-                Intent intent7 = new Intent(this, myWorkoutsActivity.class);
+                Intent intent7 = new Intent(this, AboutActivity.class);
                 startActivity(intent7);
                 break;
 
             case 8:
-                Intent intent8 = new Intent(this, myWorkoutsActivity.class);
+                Intent intent8 = new Intent(this, SettingsActivity.class);
                 startActivity(intent8);
                 break;
 
@@ -244,10 +244,10 @@ class MyAdapter extends BaseAdapter{
     protected int[] featureIconList = {
             R.drawable.ic_home_icon,
             R.drawable.ic_profile_icon,
-            R.drawable.my_workout_icon,
-            R.drawable.inspiration_icon,
-            R.drawable.my_events_icon,
-            R.drawable.my_logs_icon,
+            R.drawable.ic_my_workout_icon,
+            R.drawable.ic_inspiration_icon,
+            R.drawable.ic_my_events_icon,
+            R.drawable.ic_my_logs_icon,
             R.drawable.ic_about_icon,
             R.drawable.ic_setting_icons
     };
