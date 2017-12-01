@@ -83,6 +83,7 @@ public class NavActivity extends AppCompatActivity{
         myAdapter = new MyAdapter(this);
         mDrawerList.setAdapter(myAdapter);
 
+
         mDrawerList.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -105,6 +106,7 @@ public class NavActivity extends AppCompatActivity{
                 getSupportActionBar().setTitle(getString(R.string.app_name));
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
                 super.onDrawerOpened(drawerView);
+
             }
 
             @Override
@@ -132,6 +134,7 @@ public class NavActivity extends AppCompatActivity{
              */
             isLaunch = false;
             openActivity(0);
+
         }
 
     }
@@ -142,33 +145,9 @@ public class NavActivity extends AppCompatActivity{
      * Launching activity when any list item is clicked.
      */
     protected void openActivity(int position) {
-//Build a popup alert addTaskDialog to enable user permission for usage stats
 
-        AlertDialog.Builder blockAppsPermissionDialog;
-        blockAppsPermissionDialog = new AlertDialog.Builder(this);
-        blockAppsPermissionDialog.setMessage("SnapNap's Block App feature requires Usage Stats Access permission. Please enable it before using this feature.");
-        blockAppsPermissionDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
-                Toast.makeText(NavActivity.this,"Scroll Down to SnapNap then enable permission.",Toast.LENGTH_LONG).show();
-            }
-        });
-        blockAppsPermissionDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-        /**
-         * We can set title & itemChecked here but as this BaseActivity is parent for other activity,
-         * So whenever any activity is going to launch this BaseActivity is also going to be called and
-         * it will reset this value because of initialization in onCreate method.
-         * So that we are setting this in child activity.
-         */
-//		setTitle(featureList[position]);
-        //Toast.makeText(this, "Position " + position, Toast.LENGTH_LONG).show();
         mDrawerList.setItemChecked(position, true);
+
 
         mDrawerLayout.closeDrawer(mDrawerList);
         switch (position) {
@@ -178,38 +157,33 @@ public class NavActivity extends AppCompatActivity{
                 break;
 
             case 2:
-                Intent intent2 = new Intent(this, MainActivity.class);
+                Intent intent2 = new Intent(this, myWorkoutsActivity.class);
                 startActivity(intent2);
                 break;
 
             case 3:
-                Intent intent3 = new Intent(this, myWorkoutsActivity.class);
+                Intent intent3 = new Intent(this, inspirationActivity.class);
                 startActivity(intent3);
                 break;
 
             case 4:
-                Intent intent4 = new Intent(this, inspirationActivity.class);
+                Intent intent4 = new Intent(this, myEventsActivity.class);
                 startActivity(intent4);
                 break;
 
             case 5:
-                Intent intent5 = new Intent(this, myEventsActivity.class);
+                Intent intent5 = new Intent(this, myLogsActivity.class);
                 startActivity(intent5);
                 break;
 
             case 6:
-                Intent intent6 = new Intent(this, myLogsActivity.class);
+                Intent intent6 = new Intent(this, AboutActivity.class);
                 startActivity(intent6);
                 break;
 
             case 7:
-                Intent intent7 = new Intent(this, AboutActivity.class);
+                Intent intent7 = new Intent(this, SettingsActivity.class);
                 startActivity(intent7);
-                break;
-
-            case 8:
-                Intent intent8 = new Intent(this, SettingsActivity.class);
-                startActivity(intent8);
                 break;
 
             default:
@@ -229,7 +203,6 @@ class MyAdapter extends BaseAdapter{
      * */
     protected String[] featureList = {
             "Home",
-            "Profile",
             "Workouts",
             "Inspiration",
             "Events",
@@ -243,7 +216,6 @@ class MyAdapter extends BaseAdapter{
      */
     protected int[] featureIconList = {
             R.drawable.ic_home_icon,
-            R.drawable.ic_profile_icon,
             R.drawable.ic_my_workout_icon,
             R.drawable.ic_inspiration_icon,
             R.drawable.ic_my_events_icon,

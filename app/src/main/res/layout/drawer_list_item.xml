@@ -10,8 +10,9 @@
         android:id="@+id/navImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"></ImageView>
+        android:padding="15dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"></ImageView>
 
     <TextView
         android:id="@+id/navTextView"
@@ -21,6 +22,7 @@
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:textColor="@color/olive" />
+        android:textColor="@color/olive"
+        android:textSize="18sp" />
 
 </LinearLayout>

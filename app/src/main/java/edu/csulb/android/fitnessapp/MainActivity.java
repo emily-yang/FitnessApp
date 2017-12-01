@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         final Intent getWorkouts = new Intent(this, myWorkoutsActivity.class);
         myWorkouts = (Button)findViewById(R.id.myWorkouts);
         myWorkouts.setOnClickListener(new View.OnClickListener() {
