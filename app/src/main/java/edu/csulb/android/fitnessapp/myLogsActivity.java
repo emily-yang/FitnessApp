@@ -11,6 +11,9 @@ public class myLogsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_logs);
+
+        //To be able to display the navigation drawer
+        getLayoutInflater().inflate(R.layout.activity_logs, frameLayout);
+        mDrawerList.setItemChecked(position, true);
     }
 }

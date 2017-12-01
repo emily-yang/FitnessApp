@@ -11,6 +11,9 @@ public class myWorkoutsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_workouts);
+
+        //To be able to display the navigation drawer
+        getLayoutInflater().inflate(R.layout.activity_workouts, frameLayout);
+        mDrawerList.setItemChecked(position, true);
     }
 }

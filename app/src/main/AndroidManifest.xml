@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="edu.csulb.android.fitnessapp">
+    package="edu.csulb.android.fitnessapp">
 
     <application
         android:allowBackup="true"
@@ -11,21 +11,21 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-      
-        <activity android:name=".myLogsActivity"/>
-        <activity android:name=".WorkoutCreateActivity"/>
-        <activity android:name=".myWorkoutsActivity"/>
-        <activity android:name=".inspirationActivity"/>
-        <activity android:name=".AddEventActivity"/>
-        <activity android:name=".inspirationList"/>
-        <activity android:name=".myEventsActivity">
-         <activity android:name=".BaseActivity">
-        </activity>
+        <activity android:name=".myLogsActivity" />
+        <activity android:name=".WorkoutCreateActivity" />
+        <activity android:name=".myWorkoutsActivity" />
+        <activity android:name=".inspirationActivity" />
+        <activity android:name=".AddEventActivity" />
+        <activity android:name=".inspirationList" />
+        <activity android:name=".myEventsActivity" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
