@@ -4,12 +4,16 @@ package edu.csulb.android.fitnessapp;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +22,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -85,9 +90,12 @@ public class NavActivity extends AppCompatActivity{
 
 
         mDrawerList.setOnItemClickListener(new OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 openActivity(position);
+                Log.d("CLICKED POSITION",Integer.valueOf(position).toString());
+
             }
 
         });
@@ -145,11 +153,11 @@ public class NavActivity extends AppCompatActivity{
      * Launching activity when any list item is clicked.
      */
     protected void openActivity(int position) {
-
-        mDrawerList.setItemChecked(position, true);
-
+        mDrawerList.setItemChecked(position,true);
+        myAdapter.setItemSelector(position);
 
         mDrawerLayout.closeDrawer(mDrawerList);
+
         switch (position) {
             case 1:
                 Intent intent1 = new Intent(this, MainActivity.class);
@@ -190,6 +198,7 @@ public class NavActivity extends AppCompatActivity{
                 break;
         }
 
+
     }
 
 }
@@ -226,11 +235,17 @@ class MyAdapter extends BaseAdapter{
 
     //Get the context
     Context mContext = null;
-
     int itemSelector;
 
     public MyAdapter(Context context){
         mContext = context;
+        itemSelector = 0;
+    }
+
+    public void setItemSelector(int index)
+    {
+        itemSelector = index;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -252,12 +267,12 @@ class MyAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
+
         View row = null;
-        if(convertView == null){
+        if(row == null){
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.drawer_list_item, parent, false);
-        }
-        else {
+        }else {
             row = convertView;
         }
 
