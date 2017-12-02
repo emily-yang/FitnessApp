@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--This layout is for when there is no workouts in the databased-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id = "@+id/empty_workout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/startWorkoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="130dp"
+        app:srcCompat="@drawable/ic_start_workout" />
+
+    <TextView
+        android:id="@+id/largeMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Let's get pumpin'."
+        android:textAlignment="center"
+        android:textColor="@color/burgundy"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/message_workout"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="2sp"
+        android:text="There aren't any workouts. You should start one."
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/message_workout02"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Tap the + to create a new workout. "
+        android:textAlignment="center"
+        android:textColor="#9BE3EB"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    </View>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="40dp"
+            android:clickable="true"
+            app:backgroundTint="@color/teal"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/ic_add_24dp"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

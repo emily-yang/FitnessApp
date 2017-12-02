@@ -2,16 +2,11 @@ package edu.csulb.android.fitnessapp;
 
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,10 +17,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 /**
  * Created by joannato on 11/25/17.
@@ -95,7 +90,7 @@ public class NavActivity extends AppCompatActivity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 openActivity(position);
                 Log.d("CLICKED POSITION",Integer.valueOf(position).toString());
-
+                myAdapter.setItemSelector(position);
             }
 
         });
@@ -154,7 +149,6 @@ public class NavActivity extends AppCompatActivity{
      */
     protected void openActivity(int position) {
         mDrawerList.setItemChecked(position,true);
-        myAdapter.setItemSelector(position);
 
         mDrawerLayout.closeDrawer(mDrawerList);
 
@@ -162,36 +156,43 @@ public class NavActivity extends AppCompatActivity{
             case 1:
                 Intent intent1 = new Intent(this, MainActivity.class);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 2:
                 Intent intent2 = new Intent(this, myWorkoutsActivity.class);
                 startActivity(intent2);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 3:
                 Intent intent3 = new Intent(this, inspirationActivity.class);
                 startActivity(intent3);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 4:
                 Intent intent4 = new Intent(this, myEventsActivity.class);
                 startActivity(intent4);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 5:
                 Intent intent5 = new Intent(this, myLogsActivity.class);
                 startActivity(intent5);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 6:
                 Intent intent6 = new Intent(this, AboutActivity.class);
                 startActivity(intent6);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 7:
                 Intent intent7 = new Intent(this, SettingsActivity.class);
                 startActivity(intent7);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             default:
@@ -269,7 +270,7 @@ class MyAdapter extends BaseAdapter{
 
 
         View row = null;
-        if(row == null){
+        if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.drawer_list_item, parent, false);
         }else {
@@ -281,6 +282,9 @@ class MyAdapter extends BaseAdapter{
         titleTextView.setText(featureList[position]);
         titleImageView.setImageResource(featureIconList[position]);
 
-        return row;
+     return row;
+
     }
+
+
 }
