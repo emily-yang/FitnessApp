@@ -1,37 +1,52 @@
 package edu.csulb.android.fitnessapp;
 
-import android.content.Intent;
-import android.database.DataSetObserver;
-import android.support.design.widget.FloatingActionButton;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
+import android.util.Log;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class myWorkoutsActivity extends BaseActivity {
 
-    RecyclerView recyclerView;
-    RecyclerView.LayoutManager layoutManager;
-    RecyclerView.Adapter rvAdapter;
-    FloatingActionButton actionButton;
+    private List<Workouts> workoutsList;
+    private ListView rv;
+    WorkoutAdapter workoutAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-        //actionButton = (FloatingActionButton) findViewById(R.id.add_button);
+        mDrawerList.setItemChecked(position,true);
 
         getLayoutInflater().inflate(R.layout.activity_workouts, frameLayout);
-        mDrawerList.setItemChecked(position, true);
-        //recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        //layoutManager = new LinearLayoutManager(this);
 
-        //recyclerView.setLayoutManager(layoutManager);
+        initializeData();
 
-        //rvAdapter = new RecyclerAdapter();
-        //recyclerView.setAdapter(rvAdapter);
+        rv = (ListView) findViewById(R.id.workout_list_view);
+        workoutAdapter = new WorkoutAdapter(this, workoutsList);
+
+        rv.setAdapter(workoutAdapter);
+
+
+    }
+
+    private void initializeData(){
+        workoutsList = new ArrayList<>();
+        workoutsList.add(new Workouts("Legs", "Monday", "06"));
+        workoutsList.add(new Workouts("Arms", "Wednesday", "05"));
+        workoutsList.add(new Workouts("Chest", "Friday", "05"));
+        workoutsList.add(new Workouts("Cardio", "Sunday, Saturday", "05"));
+
     }
 
 }
+
+
+
+
