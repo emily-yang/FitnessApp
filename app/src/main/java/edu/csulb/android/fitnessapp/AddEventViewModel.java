@@ -5,15 +5,15 @@ import android.arch.lifecycle.AndroidViewModel;
 import android.os.AsyncTask;
 
 public class AddEventViewModel extends AndroidViewModel {
-    private AppDatabase appDatabase;
+    private AppDatabase eventDatabase;
 
     public AddEventViewModel(Application app) {
         super(app);
-        appDatabase = AppDatabase.getDatabase(this.getApplication());
+        eventDatabase = AppDatabase.getDatabase(this.getApplication());
     }
 
     public void addEvent(Event event) {
-        new AddEventAsyncTask(appDatabase).execute(event);
+        new AddEventAsyncTask(eventDatabase).execute(event);
     }
 
     private static class AddEventAsyncTask extends AsyncTask<Event, Void, Void> {

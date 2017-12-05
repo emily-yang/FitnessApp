@@ -53,4 +53,10 @@ public class myEventsActivity extends BaseActivity {
 
 
     }
+
+    @Override
+    protected void onDestroy() {
+        AppDatabase.destroyEventInstance();
+        super.onDestroy();
+    }
 }

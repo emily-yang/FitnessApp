@@ -9,12 +9,12 @@ import java.util.List;
 public class EventListViewModel extends AndroidViewModel{
 
     private final LiveData<List<Event>> eventList;
-    private AppDatabase appDatabase;
+    private AppDatabase eventDatabase;
 
     public EventListViewModel(Application application) {
         super(application);
-        appDatabase = AppDatabase.getDatabase(this.getApplication());
-        eventList = appDatabase.eventDao().getAllEvents();
+        eventDatabase = AppDatabase.getDatabase(this.getApplication());
+        eventList = eventDatabase.eventDao().getAllEvents();
     }
 
     public LiveData<List<Event>> getEventList() {
