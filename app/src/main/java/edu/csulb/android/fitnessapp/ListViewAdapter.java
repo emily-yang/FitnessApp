@@ -10,10 +10,12 @@ import java.util.List;
 
 public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.RecyclerViewHolder>{
 
+    private View.OnLongClickListener longClickListener;
     private List<Event> eventList;
 
-    public ListViewAdapter(List<Event> eventList) {
+    public ListViewAdapter(List<Event> eventList, View.OnLongClickListener longClickListener) {
         this.eventList = eventList;
+        this.longClickListener = longClickListener;
     }
 
     @Override
@@ -29,6 +31,8 @@ public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.Recycl
         holder.eventItemDate.setText(event.getEventDate().toString().substring(0,10));
         holder.eventItemResult.setText(event.getEventResult());
         holder.eventItemDetails.setText(event.getEventDetails());
+        holder.itemView.setTag(event);
+        holder.itemView.setOnLongClickListener(longClickListener);
     }
 
     @Override

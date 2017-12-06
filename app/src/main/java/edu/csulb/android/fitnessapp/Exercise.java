@@ -8,8 +8,8 @@ import android.arch.persistence.room.TypeConverters;
 import java.util.Date;
 import java.util.List;
 
-@Entity(tableName = "workouts")
-public class Workout {
+@Entity(tableName = "exercises")
+public class Exercise {
     @PrimaryKey
     @ColumnInfo(name = "name")
     private String name;
@@ -24,7 +24,7 @@ public class Workout {
     @ColumnInfo(name = "weight")
     private int weight;
 
-    public Workout(String name, List<Integer> days, String reps, int weight) {
+    public Exercise(String name, List<Integer> days, String reps, int weight) {
         this.name = name;
         this.days = days;
         this.reps = reps;

@@ -16,7 +16,7 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
-public class myEventsActivity extends BaseActivity {
+public class myEventsActivity extends BaseActivity implements View.OnLongClickListener {
   
     private EventListViewModel viewModel;
     private ListViewAdapter recyclerViewAdapter;
@@ -39,7 +39,7 @@ public class myEventsActivity extends BaseActivity {
         });
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>());
+        recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>(), this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(recyclerViewAdapter);
@@ -52,6 +52,13 @@ public class myEventsActivity extends BaseActivity {
         });
 
 
+    }
+
+    @Override
+    public boolean onLongClick(View v) {
+        Event event = (Event) v.getTag();
+        viewModel.deleteEvent(event);
+        return true;
     }
 
     @Override
