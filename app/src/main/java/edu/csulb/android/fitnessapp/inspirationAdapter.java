@@ -20,6 +20,7 @@ public class inspirationAdapter extends BaseAdapter {
     Context context;
     int [] imageId;
     private static LayoutInflater inflater=null;
+
     public inspirationAdapter(inspirationList inspirationList, String[] prgmNameList, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;

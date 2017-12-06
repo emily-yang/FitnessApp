@@ -6,8 +6,11 @@
     <!-- Scheme -->
     <color name="darkred">#C44040</color>
     <color name="red">#e54b4b</color>
+    <color name="lightredpink">#F8E4E3</color>
     <color name="burgundy">#554348</color>
     <color name="mint">#d7f9f1</color>
-    <color name="olive">#1c2321</color>
+    <color name="teal">#6DC1CB</color>
+    <color name="olive">#554348</color>
     <color name="cream">#fcfffc</color>
+    <color name="middlegray">#747474</color>
 </resources>
