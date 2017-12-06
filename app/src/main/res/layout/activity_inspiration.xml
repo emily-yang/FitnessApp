@@ -10,15 +10,79 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="Suggested Workouts"/>
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="33dp"
-        android:text="Inspiration"
-        android:textAlignment="center"
-        android:textColor="@color/burgundy"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:fillViewport="true"
+        android:measureAllChildren="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/workout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:text="Upper Body" />
+
+            <Button
+                android:id="@+id/workout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:text="Lower Body" />
+
+            <Button
+                android:id="@+id/workout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:text="Abs"/>
+
+            <Button
+                android:id="@+id/workout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:text="Cardio" />
+
+            <Button
+                android:id="@+id/workout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="40dp"
+                android:layout_margin="5dp"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:text="Yoga" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
 
     <Button
         android:id="@+id/list"
@@ -27,6 +91,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="122dp"
-        android:text="See Workouts" />
+        android:text="View All Exercises" />
 
 </RelativeLayout>
