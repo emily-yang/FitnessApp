@@ -14,14 +14,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="25dp"
         android:gravity="center"
-        android:text="Suggested Workouts"/>
+        android:text="Suggested Workouts"
+        android:textSize="20dp"
+        android:textColor="@color/red"/>
 
     <HorizontalScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
         android:layout_alignParentTop="true"
         android:fillViewport="true"
         android:measureAllChildren="false"

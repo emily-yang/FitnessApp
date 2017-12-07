@@ -70,7 +70,7 @@ public class inspirationActivity extends BaseActivity {
         workout5 = (Button)findViewById(R.id.workout5);
         workout5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(inspirationActivity.this, "Downward Facing Dog, Sun Salutation, Warrior I, Warrior IIgit ", Toast.LENGTH_LONG).show();
+                Toast.makeText(inspirationActivity.this, "Downward Facing Dog, Sun Salutation, Warrior I, Warrior II flow 5min", Toast.LENGTH_LONG).show();
             }
         });
 
