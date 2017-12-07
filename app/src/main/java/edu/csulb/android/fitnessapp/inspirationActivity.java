@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class inspirationActivity extends BaseActivity {
     private Button list;
@@ -37,7 +38,7 @@ public class inspirationActivity extends BaseActivity {
         workout1 = (Button)findViewById(R.id.workout1);
         workout1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(getList);
+                Toast.makeText(inspirationActivity.this, "10 Curls, 10 Dips, 20 Tricep Extensions", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -45,7 +46,7 @@ public class inspirationActivity extends BaseActivity {
         workout2 = (Button)findViewById(R.id.workout2);
         workout2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(getList);
+                Toast.makeText(inspirationActivity.this, "10 Squats, 10 Deadlifts, Jump Rope 5min", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -53,7 +54,7 @@ public class inspirationActivity extends BaseActivity {
         workout3 = (Button)findViewById(R.id.workout3);
         workout3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(getList);
+                Toast.makeText(inspirationActivity.this, "20 Sit Ups, 25 Cable Crunches, Max Plank", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -61,7 +62,7 @@ public class inspirationActivity extends BaseActivity {
         workout4 = (Button)findViewById(R.id.workout4);
         workout4.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(getList);
+                Toast.makeText(inspirationActivity.this, "Run 5min, High Knees, Jump Rope 3 sets 5min", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -69,7 +70,7 @@ public class inspirationActivity extends BaseActivity {
         workout5 = (Button)findViewById(R.id.workout5);
         workout5.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(getList);
+                Toast.makeText(inspirationActivity.this, "Downward Facing Dog, Sun Salutation, Warrior I, Warrior IIgit ", Toast.LENGTH_LONG).show();
             }
         });
 
