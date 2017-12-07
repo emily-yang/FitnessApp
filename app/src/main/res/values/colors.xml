@@ -4,6 +4,7 @@
     <color name="colorPrimary">#1c2321</color>
 
     <!-- Scheme -->
+    <color name="darkerred">#640000</color>
     <color name="darkred">#C44040</color>
     <color name="red">#e54b4b</color>
     <color name="lightredpink">#F8E4E3</color>
@@ -13,4 +14,5 @@
     <color name="olive">#554348</color>
     <color name="cream">#fcfffc</color>
     <color name="middlegray">#747474</color>
+    <color name="lightgray">#F8F8F8</color>
 </resources>

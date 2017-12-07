@@ -1,105 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.csulb.android.fitnessapp.MainActivity"
-    android:background="@color/cream"
-    android:columnCount="1"
-    android:rowCount="2"
-    android:orientation="horizontal">
+    android:orientation="vertical">
+
+    <include layout="@layout/custom_app_bar"/>
 
     <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="edu.csulb.android.fitnessapp.MainActivity"
+        android:background="@color/cream"
         android:columnCount="1"
-        android:rowCount="2">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="Upcoming Workout"
-            android:textAlignment="center"
-            android:textColor="@color/burgundy"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Day 2: Pull"
-            android:textAlignment="center"
-            android:textColor="@color/red"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </GridLayout>
-
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_margin="10dp"
-        android:columnCount="2"
         android:rowCount="2"
-        android:id="@+id/gridLayout">
+        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/myWorkouts"
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_marginBottom="10dp"
-            android:text="My Workouts"
-            android:drawableTop="@drawable/my_workout_icon"
-            android:background="@color/mint"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"/>
+            android:layout_marginTop="20dp"
+            android:columnCount="1"
+            android:rowCount="2">
 
-        <Button
-            android:id="@+id/myEvents"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="My Events"
-            android:drawableTop="@drawable/my_events_icon"
-            android:background="@color/mint"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Upcoming Workout"
+                android:textAlignment="center"
+                android:textColor="@color/burgundy"
+                android:textSize="18sp" />
 
-        <Button
-            android:id="@+id/inspiration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Inspiration"
-            android:drawableTop="@drawable/inspiration_icon"
-            android:background="@color/mint"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"/>
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Day 2: Pull"
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/myLogs"
-            android:layout_width="wrap_content"
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:text="My Logs"
-            android:drawableTop="@drawable/my_logs_icon"
-            android:background="@color/mint"
-            android:layout_gravity="fill"
-            android:layout_columnWeight="1"/>
+            android:layout_gravity="bottom"
+            android:layout_margin="10dp"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:id="@+id/gridLayout">
+
+            <Button
+                android:id="@+id/myWorkouts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="My Workouts"
+                android:drawableTop="@drawable/my_workout_icon"
+                android:background="@color/mint"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
+
+            <Button
+                android:id="@+id/myEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="My Events"
+                android:drawableTop="@drawable/my_events_icon"
+                android:background="@color/mint"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
+
+            <Button
+                android:id="@+id/inspiration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Inspiration"
+                android:drawableTop="@drawable/inspiration_icon"
+                android:background="@color/mint"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
+
+            <Button
+                android:id="@+id/myLogs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="My Logs"
+                android:drawableTop="@drawable/my_logs_icon"
+                android:background="@color/mint"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"/>
+
+        </GridLayout>
 
     </GridLayout>
 
-</GridLayout>
+</LinearLayout>

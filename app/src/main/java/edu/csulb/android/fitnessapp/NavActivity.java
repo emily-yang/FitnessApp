@@ -106,7 +106,6 @@ public class NavActivity extends AppCompatActivity{
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                getSupportActionBar().setTitle(getString(R.string.app_name));
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
                 super.onDrawerOpened(drawerView);
 
