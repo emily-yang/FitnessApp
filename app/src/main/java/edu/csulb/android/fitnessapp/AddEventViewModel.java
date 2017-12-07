@@ -9,7 +9,7 @@ public class AddEventViewModel extends AndroidViewModel {
 
     public AddEventViewModel(Application app) {
         super(app);
-        eventDatabase = AppDatabase.getDatabase(this.getApplication());
+        eventDatabase = AppDatabase.getEventDatabase(this.getApplication());
     }
 
     public void addEvent(Event event) {

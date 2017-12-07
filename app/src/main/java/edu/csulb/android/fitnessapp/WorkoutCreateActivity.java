@@ -1,6 +1,8 @@
 package edu.csulb.android.fitnessapp;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -33,8 +35,9 @@ public class WorkoutCreateActivity extends BaseActivity {
     private String name;
     private String reps;
     private String weight;
-
     private List<Integer> days;
+
+    private AddExerciseViewModel addExerciseViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +55,8 @@ public class WorkoutCreateActivity extends BaseActivity {
         boxFri = findViewById(R.id.checkbox_fri);
         boxSat = findViewById(R.id.checkbox_sat);
         saveButton = findViewById(R.id.exercise_button);
+
+        addExerciseViewModel = ViewModelProviders.of(this).get(AddExerciseViewModel.class);
 
         saveButton.setOnClickListener((new View.OnClickListener(){
             @Override
@@ -77,8 +82,12 @@ public class WorkoutCreateActivity extends BaseActivity {
                             "Please complete all fields",
                             Toast.LENGTH_SHORT).show();
                 else {
-
-                    // save exercise
+                    addExerciseViewModel.addExercise(new Exercise(
+                            name,
+                            days,
+                            reps,
+                            Integer.parseInt(weight)
+                    ));
 
                     finish();
                 }

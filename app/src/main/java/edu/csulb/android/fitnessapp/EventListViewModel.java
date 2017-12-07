@@ -14,7 +14,7 @@ public class EventListViewModel extends AndroidViewModel{
 
     public EventListViewModel(Application application) {
         super(application);
-        eventDatabase = AppDatabase.getDatabase(this.getApplication());
+        eventDatabase = AppDatabase.getEventDatabase(this.getApplication());
         eventList = eventDatabase.eventDao().getAllEvents();
     }
 
