@@ -26,6 +26,8 @@ public class inspirationActivity extends BaseActivity {
                 startActivity(getList);
             }
         });
+
+
     }
 }
 

@@ -37,51 +37,56 @@
                 android:id="@+id/workout1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="40dp"
+                android:padding="100dp"
                 android:layout_margin="5dp"
-                android:drawableTop="@drawable/my_workout_icon"
-                android:background="@color/mint"
-                android:text="Upper Body" />
+                android:background="@drawable/arms"
+                android:text="Upper Body"
+                android:textColor="#FFFFFF"
+                android:minHeight="200dp" />
 
             <Button
                 android:id="@+id/workout2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="40dp"
+                android:padding="100dp"
                 android:layout_margin="5dp"
-                android:drawableTop="@drawable/my_workout_icon"
-                android:background="@color/mint"
-                android:text="Lower Body" />
+                android:background="@drawable/legs"
+                android:text="Lower Body"
+                android:textColor="#FFFFFF"
+                android:minHeight="200dp" />
 
             <Button
                 android:id="@+id/workout3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="40dp"
+                android:padding="100dp"
                 android:layout_margin="5dp"
-                android:drawableTop="@drawable/my_workout_icon"
-                android:background="@color/mint"
-                android:text="Abs"/>
+                android:background="@drawable/abs"
+                android:text="Abs"
+                android:textColor="#FFFFFF"
+                android:minHeight="200dp" />
 
             <Button
                 android:id="@+id/workout4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="40dp"
+                android:padding="100dp"
                 android:layout_margin="5dp"
-                android:drawableTop="@drawable/my_workout_icon"
-                android:background="@color/mint"
-                android:text="Cardio" />
+                android:background="@drawable/cardio"
+                android:text="Cardio"
+                android:textColor="#FFFFFF"
+                android:minHeight="200dp" />
 
             <Button
                 android:id="@+id/workout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="40dp"
+                android:padding="100dp"
                 android:layout_margin="5dp"
-                android:drawableTop="@drawable/my_workout_icon"
-                android:background="@color/mint"
-                android:text="Yoga" />
+                android:background="@drawable/yoga"
+                android:text="Yoga"
+                android:textColor="#FFFFFF"
+                android:minHeight="200dp" />
 
         </LinearLayout>
 
@@ -93,8 +98,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="122dp"
-        android:text="View All Exercises" />
+        android:text="View Exercise Guide" />
 
 </LinearLayout>
