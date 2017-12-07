@@ -3,6 +3,7 @@ package edu.csulb.android.fitnessapp;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,23 +12,24 @@ import android.widget.Toast;
 
 public class BaseActivity extends NavActivity {
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //To be able to display the navigation drawer
-        getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
+        getLayoutInflater().inflate(R.layout.activity_base, frameLayout);
         mDrawerList.setItemChecked(position, true);
 
-        //To use the custom action bar
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.custom_app_bar);
-        View view = getSupportActionBar().getCustomView();
+        toolbar = (Toolbar) findViewById( R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
     }
 
     /*
-     *   Clicking on menu-icon or the hamburger looking icon will reveal the navigation drawer
+     *   Clicking on menu_events-icon or the hamburger looking icon will reveal the navigation drawer
      */
     public void onClick(View v) {
         switch (v.getId()){

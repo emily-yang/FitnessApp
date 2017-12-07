@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/cream">
+    android:background="@android:color/white">
 
+    <include layout="@layout/custom_app_bar"/>
 
     <ListView
         android:id="@+id/listView"

@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
 
         final Intent getWorkouts = new Intent(this, myWorkoutsActivity.class);
         myWorkouts = (Button)findViewById(R.id.myWorkouts);
