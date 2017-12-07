@@ -20,6 +20,7 @@ public class inspirationAdapter extends BaseAdapter {
     Context context;
     int [] imageId;
     private static LayoutInflater inflater=null;
+
     public inspirationAdapter(inspirationList inspirationList, String[] prgmNameList, int[] prgmImages) {
         // TODO Auto-generated constructor stub
         result=prgmNameList;
@@ -93,7 +94,7 @@ public class inspirationAdapter extends BaseAdapter {
                         context.startActivity(list4);
                         break;
 
-                    /*case 4:
+                    case 4:
                         String myUri5 = "https://www.youtube.com/watch?v=mpZ9VRisAyw";
                         Intent list5 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri5));
                         context.startActivity(list5);
@@ -122,8 +123,90 @@ public class inspirationAdapter extends BaseAdapter {
                         Intent list9 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri9));
                         context.startActivity(list9);
                         break;
-                        */
 
+                    case 9:
+                        String myUri10 = "https://www.youtube.com/watch?v=n1q-lAzAWms";
+                        Intent list10 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri10));
+                        context.startActivity(list10);
+                        break;
+
+                    case 10:
+                        String myUri11 = "https://www.youtube.com/watch?v=1fbU_MkV7NE";
+                        Intent list11 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri11));
+                        context.startActivity(list11);
+                        break;
+
+                    case 11:
+                        String myUri12 = "https://www.youtube.com/watch?v=IODxDxX7oi4";
+                        Intent list12 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri12));
+                        context.startActivity(list12);
+                        break;
+
+                    case 12:
+                        String myUri13 = "https://www.youtube.com/watch?v=ykJmrZ5v0Oo";
+                        Intent list13 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri13));
+                        context.startActivity(list13);
+                        break;
+
+                    case 13:
+                        String myUri14 = "https://www.youtube.com/watch?v=wjUmnZH528Y";
+                        Intent list14 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri14));
+                        context.startActivity(list14);
+                        break;
+
+                    case 14:
+                        String myUri15 = "https://www.youtube.com/watch?v=j97SSGsnCAQ";
+                        Intent list15 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri15));
+                        context.startActivity(list15);
+                        break;
+
+                    case 15:
+                        String myUri16 = "https://www.youtube.com/watch?v=4hRQP09nPnM";
+                        Intent list16 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri16));
+                        context.startActivity(list16);
+                        break;
+
+                    case 16:
+                        String myUri17 = "https://www.youtube.com/watch?v=k4qaVoAbeHM";
+                        Intent list17 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri17));
+                        context.startActivity(list17);
+                        break;
+
+                    case 17:
+                        String myUri18 = "https://www.youtube.com/watch?v=hmZxKCXS0tY";
+                        Intent list18 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri18));
+                        context.startActivity(list18);
+                        break;
+
+                    case 18:
+                        String myUri19 = "https://www.youtube.com/watch?v=fQ7ewHFw_I8";
+                        Intent list19 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri19));
+                        context.startActivity(list19);
+                        break;
+
+                    case 19:
+                        String myUri20 = "https://www.youtube.com/watch?v=paCfxhgW6bI";
+                        Intent list20 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri20));
+                        context.startActivity(list20);
+                        break;
+
+                    case 20:
+                        String myUri21 = "https://www.youtube.com/watch?v=UpH7rm0cYbM";
+                        Intent list21 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri21));
+                        context.startActivity(list21);
+                        break;
+
+                    case 21:
+                        String myUri22 = "https://www.youtube.com/watch?v=aFoektJK9dU";
+                        Intent list22 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri22));
+                        context.startActivity(list22);
+                        break;
+
+                    case 22:
+                        String myUri23 = "https://www.youtube.com/watch?v=D0GwAezTvtg";
+                        Intent list23 = new Intent(Intent.ACTION_VIEW, Uri.parse(myUri23));
+                        context.startActivity(list23);
+                        break;
 
                 }
             }

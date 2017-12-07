@@ -2,14 +2,13 @@ package edu.csulb.android.fitnessapp;
 
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,9 +17,10 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 /**
  * Created by joannato on 11/25/17.
@@ -83,10 +83,14 @@ public class NavActivity extends AppCompatActivity{
         myAdapter = new MyAdapter(this);
         mDrawerList.setAdapter(myAdapter);
 
+
         mDrawerList.setOnItemClickListener(new OnItemClickListener() {
+
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 openActivity(position);
+                Log.d("CLICKED POSITION",Integer.valueOf(position).toString());
+                myAdapter.setItemSelector(position);
             }
 
         });
@@ -102,9 +106,9 @@ public class NavActivity extends AppCompatActivity{
 
             @Override
             public void onDrawerOpened(View drawerView) {
-                getSupportActionBar().setTitle(getString(R.string.app_name));
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
                 super.onDrawerOpened(drawerView);
+
             }
 
             @Override
@@ -132,6 +136,7 @@ public class NavActivity extends AppCompatActivity{
              */
             isLaunch = false;
             openActivity(0);
+
         }
 
     }
@@ -142,79 +147,57 @@ public class NavActivity extends AppCompatActivity{
      * Launching activity when any list item is clicked.
      */
     protected void openActivity(int position) {
-//Build a popup alert addTaskDialog to enable user permission for usage stats
-
-        AlertDialog.Builder blockAppsPermissionDialog;
-        blockAppsPermissionDialog = new AlertDialog.Builder(this);
-        blockAppsPermissionDialog.setMessage("SnapNap's Block App feature requires Usage Stats Access permission. Please enable it before using this feature.");
-        blockAppsPermissionDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                startActivity(new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS));
-                Toast.makeText(NavActivity.this,"Scroll Down to SnapNap then enable permission.",Toast.LENGTH_LONG).show();
-            }
-        });
-        blockAppsPermissionDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-        /**
-         * We can set title & itemChecked here but as this BaseActivity is parent for other activity,
-         * So whenever any activity is going to launch this BaseActivity is also going to be called and
-         * it will reset this value because of initialization in onCreate method.
-         * So that we are setting this in child activity.
-         */
-//		setTitle(featureList[position]);
-        //Toast.makeText(this, "Position " + position, Toast.LENGTH_LONG).show();
-        mDrawerList.setItemChecked(position, true);
+        mDrawerList.setItemChecked(position,true);
 
         mDrawerLayout.closeDrawer(mDrawerList);
+
         switch (position) {
             case 1:
                 Intent intent1 = new Intent(this, MainActivity.class);
                 startActivity(intent1);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 2:
-                Intent intent2 = new Intent(this, MainActivity.class);
+                Intent intent2 = new Intent(this, myWorkoutsActivity.class);
                 startActivity(intent2);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 3:
-                Intent intent3 = new Intent(this, myWorkoutsActivity.class);
+                Intent intent3 = new Intent(this, inspirationActivity.class);
                 startActivity(intent3);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 4:
-                Intent intent4 = new Intent(this, inspirationActivity.class);
+                Intent intent4 = new Intent(this, myEventsActivity.class);
                 startActivity(intent4);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 5:
-                Intent intent5 = new Intent(this, myEventsActivity.class);
+                Intent intent5 = new Intent(this, myLogsActivity.class);
                 startActivity(intent5);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 6:
-                Intent intent6 = new Intent(this, myLogsActivity.class);
+                Intent intent6 = new Intent(this, AboutActivity.class);
                 startActivity(intent6);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             case 7:
-                Intent intent7 = new Intent(this, AboutActivity.class);
+                Intent intent7 = new Intent(this, SettingsActivity.class);
                 startActivity(intent7);
-                break;
-
-            case 8:
-                Intent intent8 = new Intent(this, SettingsActivity.class);
-                startActivity(intent8);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                 break;
 
             default:
                 break;
         }
+
 
     }
 
@@ -229,7 +212,6 @@ class MyAdapter extends BaseAdapter{
      * */
     protected String[] featureList = {
             "Home",
-            "Profile",
             "Workouts",
             "Inspiration",
             "Events",
@@ -243,7 +225,6 @@ class MyAdapter extends BaseAdapter{
      */
     protected int[] featureIconList = {
             R.drawable.ic_home_icon,
-            R.drawable.ic_profile_icon,
             R.drawable.ic_my_workout_icon,
             R.drawable.ic_inspiration_icon,
             R.drawable.ic_my_events_icon,
@@ -254,11 +235,17 @@ class MyAdapter extends BaseAdapter{
 
     //Get the context
     Context mContext = null;
-
     int itemSelector;
 
     public MyAdapter(Context context){
         mContext = context;
+        itemSelector = 0;
+    }
+
+    public void setItemSelector(int index)
+    {
+        itemSelector = index;
+        notifyDataSetChanged();
     }
 
     @Override
@@ -280,12 +267,12 @@ class MyAdapter extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
+
         View row = null;
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.drawer_list_item, parent, false);
-        }
-        else {
+        }else {
             row = convertView;
         }
 
@@ -294,6 +281,9 @@ class MyAdapter extends BaseAdapter{
         titleTextView.setText(featureList[position]);
         titleImageView.setImageResource(featureIconList[position]);
 
-        return row;
+     return row;
+
     }
+
+
 }

@@ -21,11 +21,14 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getLayoutInflater().inflate(R.layout.activity_main, frameLayout);
+
         final Intent getWorkouts = new Intent(this, myWorkoutsActivity.class);
         myWorkouts = (Button)findViewById(R.id.myWorkouts);
         myWorkouts.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(getWorkouts);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -34,6 +37,7 @@ public class MainActivity extends BaseActivity {
         myEvents.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(getEvents);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -42,6 +46,7 @@ public class MainActivity extends BaseActivity {
         inspiration.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(getInspiration);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
 
@@ -50,6 +55,7 @@ public class MainActivity extends BaseActivity {
         myLogs.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(getLogs);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
     }
