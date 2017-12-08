@@ -8,16 +8,13 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical">
+    <include layout="@layout/custom_app_bar"></include>
 
-    <View
-        android:id = "@+id/empty_workout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/startWorkoutImage"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="80dp"
         app:srcCompat="@drawable/ic_start_workout" />
 
     <TextView
@@ -52,7 +49,7 @@
         android:textColor="#9BE3EB"
         android:textSize="20sp"
         android:textStyle="bold" />
-    </View>
+
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -60,14 +57,15 @@
         android:elevation="0dp">
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/add_button"
+            android:id="@+id/workout_add_button"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="50dp"
             android:layout_marginRight="40dp"
             android:clickable="true"
-            app:backgroundTint="@color/teal"
+            android:onClick="onClick"
+            app:backgroundTint="@color/red"
             app:fabSize="normal"
             app:srcCompat="@drawable/ic_add_24dp"/>
     </android.support.design.widget.CoordinatorLayout>

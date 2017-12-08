@@ -81,6 +81,14 @@ public class inspirationList extends BaseActivity {
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(new inspirationAdapter(this, prgmNameList, prgmImages));
     }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back_icon:
+                finish();
+                break;
+        }
+    }
 }
 
 
