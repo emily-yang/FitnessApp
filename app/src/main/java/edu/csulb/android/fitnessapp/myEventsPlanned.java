@@ -32,18 +32,18 @@ public class myEventsPlanned extends Fragment{
         super.onCreate(savedInstanceState);
 
 
-        recyclerView = (RecyclerView) recyclerView.findViewById(R.id.recycler_view);
-        recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>());
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        recyclerView.setAdapter(recyclerViewAdapter);
-        viewModel = ViewModelProviders.of(this).get(EventListViewModel.class);
-        viewModel.getEventList().observe(myEventsPlanned.this, new Observer<List<Event>>() {
-            @Override
-            public void onChanged(@Nullable List<Event> events) {
-                recyclerViewAdapter.addEvents(events); // addItems?;;
-            }
-        });
+       // recyclerView = (RecyclerView) recyclerView.findViewById(R.id.recycler_view);
+        // recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>());
+//        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+//
+//        recyclerView.setAdapter(recyclerViewAdapter);
+//        viewModel = ViewModelProviders.of(this).get(EventListViewModel.class);
+//        viewModel.getEventList().observe(myEventsPlanned.this, new Observer<List<Event>>() {
+//            @Override
+//            public void onChanged(@Nullable List<Event> events) {
+//                recyclerViewAdapter.addEvents(events); // addItems?;;
+//            }
+//        });
     }
 
     @Override
