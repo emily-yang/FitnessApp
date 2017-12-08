@@ -28,14 +28,6 @@ public class WorkoutCreateActivity extends BaseActivity {
     EditText exerciseName;
     EditText exerciseReps;
     EditText exerciseWeight;
-//    RadioButton radioSun;
-//    RadioButton radioMon;
-//    RadioButton radioTue;
-//    RadioButton radioWed;
-//    RadioButton radioThu;
-//    RadioButton radioFri;
-//    RadioButton radioSat;
-//    RadioGroup radioGroup;
     Button saveButton;
 
     Spinner spinner;
@@ -55,14 +47,6 @@ public class WorkoutCreateActivity extends BaseActivity {
         exerciseName = findViewById(R.id.exercise_name_field);
         exerciseReps = findViewById(R.id.exercise_reps_field);
         exerciseWeight = findViewById(R.id.exercise_weight_field);
-//        radioGroup = findViewById(R.id.radio_group);
-//        radioSun = findViewById(R.id.radio_sun);
-//        radioMon = findViewById(R.id.radio_mon);
-//        radioTue = findViewById(R.id.radio_tue);
-//        radioWed = findViewById(R.id.radio_wed);
-//        radioThu = findViewById(R.id.radio_thu);
-//        radioFri = findViewById(R.id.radio_fri);
-//        radioSat = findViewById(R.id.radio_sat);
         spinner = findViewById(R.id.spinner);
         saveButton = findViewById(R.id.exercise_button);
 
@@ -87,28 +71,6 @@ public class WorkoutCreateActivity extends BaseActivity {
                 name = exerciseName.getText().toString();
                 reps = exerciseReps.getText().toString();
                 weight = exerciseWeight.getText().toString();
-
-//                int radioId = radioGroup.getCheckedRadioButtonId();
-//                String radioValue = ((RadioButton)findViewById(radioId)).getText().toString();
-//
-//                switch(radioValue) {
-//                    case "Sunday": day = 1; break;
-//                    case "Monday": day = 2; break;
-//                    case "Tuesday": day = 3; break;
-//                    case "Wednesday": day = 4; break;
-//                    case "Thursday": day = 5; break;
-//                    case "Friday": day = 6; break;
-//                    case "Saturday": day = 7;
-//                }
-
-//                if (radioSun.isChecked()) days.add(Calendar.SUNDAY);
-//                if (radioMon.isChecked()) days.add(Calendar.MONDAY);
-//                if (radioTue.isChecked()) days.add(Calendar.TUESDAY);
-//                if (radioWed.isChecked()) days.add(Calendar.WEDNESDAY);
-//                if (radioThu.isChecked()) days.add(Calendar.THURSDAY);
-//                if (radioFri.isChecked()) days.add(Calendar.FRIDAY);
-//                if (radioSat.isChecked()) days.add(Calendar.SATURDAY);
-
 
                 if (TextUtils.isEmpty(name)  || TextUtils.isEmpty(reps) ||
                         TextUtils.isEmpty(weight))
