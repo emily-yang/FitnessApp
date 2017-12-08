@@ -5,23 +5,27 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorkoutAdapter extends BaseAdapter{
+public class WorkoutAdapter extends ArrayAdapter<Workouts>{
 
         List<Workouts> workouts;
         View view;
         //Get the context
         Context mContext = null;
+        int resource;
         WorkoutViewHolder viewHolder;
 
-    public WorkoutAdapter (Context context, List<Workouts> wList)
+    public WorkoutAdapter (Context context, int resource, ArrayList<Workouts> wList)
     {
+        super(context, resource,wList);
         mContext = context;
+        this.resource = resource;
         workouts = wList;
     }
 

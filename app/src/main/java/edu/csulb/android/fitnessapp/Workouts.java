@@ -11,11 +11,11 @@ public class Workouts {
     private String numberOfWorkouts;
     private String lastDate;
 
-    public Workouts(String workoutName, String dayOfTheWeek, String numberOfWorkouts) {
+    public Workouts(String workoutName, String dayOfTheWeek, String numberOfWorkouts,String lastDate) {
         this.workoutName = workoutName;
         this.dayOfTheWeek = dayOfTheWeek;
         this.numberOfWorkouts = numberOfWorkouts;
-        this.lastDate = "--";
+        this.lastDate = lastDate;
     }
 
     public String getWorkoutName() {

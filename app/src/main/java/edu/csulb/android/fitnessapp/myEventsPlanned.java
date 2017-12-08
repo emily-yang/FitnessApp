@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -22,6 +23,7 @@ public class myEventsPlanned extends Fragment{
     private EventListViewModel viewModel;
     private ListViewAdapter recyclerViewAdapter;
     private RecyclerView recyclerView;
+    private List<Event> list;
 
     public myEventsPlanned() {
         // Required empty public constructor
@@ -31,9 +33,19 @@ public class myEventsPlanned extends Fragment{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    }
 
-       // recyclerView = (RecyclerView) recyclerView.findViewById(R.id.recycler_view);
-        // recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>());
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        list = new ArrayList<>();
+
+        list.add(new Event("Sample", new Date(20180202) , "Beginner", "SampleSample"));
+
+
+        //BUG FOUND
+//        recyclerView = (RecyclerView) recyclerView.findViewById(R.id.recycler_view);
+//        recyclerViewAdapter = new ListViewAdapter(list);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 //
 //        recyclerView.setAdapter(recyclerViewAdapter);
@@ -44,13 +56,11 @@ public class myEventsPlanned extends Fragment{
 //                recyclerViewAdapter.addEvents(events); // addItems?;;
 //            }
 //        });
-    }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.custom_event_fragment_planned, container, false);
+
+
 
     }
 
