@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical" android:layout_marginBottom="10dp">
 
     <include layout="@layout/custom_app_bar"/>
+
+    <include
+        layout="@layout/todays_workout_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
     <GridLayout
 
@@ -18,34 +24,6 @@
         android:rowCount="2"
         android:orientation="horizontal">
 
-        <GridLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:columnCount="1"
-            android:rowCount="2">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="Upcoming Workout"
-                android:textAlignment="center"
-                android:textColor="@color/burgundy"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Day 2: Pull"
-                android:textAlignment="center"
-                android:textColor="@color/red"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-        </GridLayout>
 
         <GridLayout
             android:layout_width="fill_parent"
