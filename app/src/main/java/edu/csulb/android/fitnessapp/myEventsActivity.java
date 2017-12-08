@@ -20,10 +20,6 @@ import android.support.v7.widget.Toolbar;
 
 
 public class myEventsActivity extends NavActivity {
-  
-//    private EventListViewModel viewModel;
-//    private ListViewAdapter recyclerViewAdapter;
-//    private RecyclerView recyclerView;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -47,28 +43,6 @@ public class myEventsActivity extends NavActivity {
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
-
-
-//        Button button = (Button) findViewById(R.id.add_event_button);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(myEventsActivity.this, AddEventActivity.class));
-//            }
-//        });
-//
-//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-//        recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>());
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//
-//        recyclerView.setAdapter(recyclerViewAdapter);
-//        viewModel = ViewModelProviders.of(this).get(EventListViewModel.class);
-//        viewModel.getEventList().observe(myEventsActivity.this, new Observer<List<Event>>() {
-//            @Override
-//            public void onChanged(@Nullable List<Event> events) {
-//                recyclerViewAdapter.addEvents(events); // addItems?;;
-//            }
-//        });
     }
 
     @Override
@@ -104,6 +78,11 @@ public class myEventsActivity extends NavActivity {
                 } else {
                     mDrawerLayout.openDrawer(mDrawerList);
                 }
+                break;
+
+            case R.id.event_add_button:
+                final Intent getWorkouts = new Intent(this, AddEventActivity.class);
+                startActivity(getWorkouts);
                 break;
         }
     }

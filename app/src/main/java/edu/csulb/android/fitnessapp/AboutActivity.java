@@ -8,6 +8,7 @@ public class AboutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        getLayoutInflater().inflate(R.layout.activity_about, frameLayout);
+        mDrawerList.setItemChecked(position, true);
     }
 }

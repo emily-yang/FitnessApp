@@ -10,7 +10,7 @@
     android:id="@+id/constraintLayout"
     android:orientation="vertical">
 
-    <include layout="@layout/custom_app_bar"/>
+    <include layout="@layout/add_events_app_bar"/>
 
     <TextView
         android:id="@+id/event_name_label"
