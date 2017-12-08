@@ -4,22 +4,21 @@ import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class myEventsActivity extends BaseActivity implements View.OnLongClickListener {
   
     private EventListViewModel viewModel;
-    private ListViewAdapter recyclerViewAdapter;
+    private EventListAdapter recyclerViewAdapter;
     private RecyclerView recyclerView;
 
     @Override
@@ -39,7 +38,7 @@ public class myEventsActivity extends BaseActivity implements View.OnLongClickLi
         });
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerViewAdapter = new ListViewAdapter(new ArrayList<Event>(), this);
+        recyclerViewAdapter = new EventListAdapter(new ArrayList<Event>(), this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         recyclerView.setAdapter(recyclerViewAdapter);

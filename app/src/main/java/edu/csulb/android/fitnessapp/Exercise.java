@@ -2,8 +2,10 @@ package edu.csulb.android.fitnessapp;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
 import android.arch.persistence.room.TypeConverters;
+import android.support.annotation.NonNull;
 
 import java.util.Date;
 import java.util.List;
@@ -11,25 +13,14 @@ import java.util.List;
 @Entity(tableName = "exercises")
 public class Exercise {
     @PrimaryKey
-    @ColumnInfo(name = "name")
+    @NonNull
     private String name;
 
-    @ColumnInfo(name = "days")
-//    @TypeConverters(DateConverter.class)
-    private List<Integer> days;
-
-    @ColumnInfo(name = "reps")
     private String reps;
 
-    @ColumnInfo(name = "weight")
     private int weight;
 
-    public Exercise(String name, List<Integer> days, String reps, int weight) {
-        this.name = name;
-        this.days = days;
-        this.reps = reps;
-        this.weight = weight;
-    }
+    private int day;
 
     public String getName() {
         return name;
@@ -39,12 +30,12 @@ public class Exercise {
         this.name = name;
     }
 
-    public List<Integer> getDays() {
-        return days;
+    public int getDay() {
+        return day;
     }
 
-    public void setDays(List<Integer> days) {
-        this.days = days;
+    public void setDay(int day) {
+        this.day = day;
     }
 
     public String getReps() {

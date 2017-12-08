@@ -5,12 +5,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.csulb.android.fitnessapp.myWorkoutsActivity"
-    android:background="@color/mint">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="edu.csulb.android.fitnessapp.myWorkoutsActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/add_exercise_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Exercise"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="My Workouts"/>
+        android:layout_below="@+id/add_exercise_button"/>
 
 </RelativeLayout>

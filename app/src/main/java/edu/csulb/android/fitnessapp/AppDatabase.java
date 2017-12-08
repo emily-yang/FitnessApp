@@ -1,11 +1,14 @@
 package edu.csulb.android.fitnessapp;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {Event.class}, version = 1)
+import java.util.List;
+
+@Database(entities = {Event.class, Exercise.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase{
 
     public abstract EventDao eventDao();

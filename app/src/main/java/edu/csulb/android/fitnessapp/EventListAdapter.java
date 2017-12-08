@@ -6,16 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-public class ListViewAdapter extends RecyclerView.Adapter<ListViewAdapter.RecyclerViewHolder>{
+public class EventListAdapter extends RecyclerView.Adapter<EventListAdapter.RecyclerViewHolder>{
 
     private View.OnLongClickListener longClickListener;
     private List<Event> eventList;
 
-    public ListViewAdapter(List<Event> eventList, View.OnLongClickListener longClickListener) {
+    public EventListAdapter(List<Event> eventList, View.OnLongClickListener longClickListener) {
         this.eventList = eventList;
         this.longClickListener = longClickListener;
+
     }
 
     @Override

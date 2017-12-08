@@ -12,10 +12,10 @@ import static android.arch.persistence.room.OnConflictStrategy.REPLACE;
 
 @Dao
 public interface ExerciseDao {
-    @Query("SELECT * FROM Exercise")
+    @Query("SELECT * FROM exercises")
     LiveData<List<Exercise>> getAllExercises();
 
-    @Query("SELECT * FROM Exercise WHERE day = :day")
+    @Query("SELECT * FROM exercises WHERE day = :day")
     LiveData<List<Exercise>> getExerciseByDay(int day);
 
     @Insert(onConflict=REPLACE)
