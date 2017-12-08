@@ -81,6 +81,14 @@ public class AddEventActivity extends BaseActivity implements DatePickerDialog.O
 
     }
 
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back_icon:
+                finish();
+                break;
+        }
+    }
+
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         calendar.set(Calendar.YEAR, year);

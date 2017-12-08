@@ -20,10 +20,6 @@ import android.support.v7.widget.Toolbar;
 
 
 public class myEventsActivity extends NavActivity {
-  
-//    private EventListViewModel viewModel;
-//    private ListViewAdapter recyclerViewAdapter;
-//    private RecyclerView recyclerView;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -104,6 +100,11 @@ public class myEventsActivity extends NavActivity {
                 } else {
                     mDrawerLayout.openDrawer(mDrawerList);
                 }
+                break;
+
+            case R.id.event_add_button:
+                final Intent getWorkouts = new Intent(this, AddEventActivity.class);
+                startActivity(getWorkouts);
                 break;
         }
     }

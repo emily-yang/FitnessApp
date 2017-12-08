@@ -24,8 +24,9 @@
         <activity android:name=".inspirationList" />
         <activity android:name=".myEventsActivity"
             android:theme="@style/EventAppTheme"
-            android:label="@string/app_name"/>
-        <activity android:name=".FindEventsActivity" />
+            android:label="@string/app_name" />
+        <activity android:name=".FindEventsActivity"
+            android:launchMode= "singleInstance"/>
         <activity android:name=".BaseActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".SettingsActivity"></activity>
